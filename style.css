@@ -140,3 +140,10 @@ h1 {
   left: calc(anchor(right) - 70px);
   bottom: calc(anchor(top) + 13px);
 }
+
+form {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 500px;
+    justify-items: start;
+}
