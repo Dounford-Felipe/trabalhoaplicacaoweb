@@ -1,4 +1,4 @@
-let currentTab = "formacao";
+let currentTab = "portfolio";
 function changeTab(page) {
     /*Decidi por ter uma variável com a aba atual e só alterar ela, para facilitar a alteração do botão também
     Uma outra opção seria document.getElementById("div_id").style.display = "none"; para cada div
@@ -9,4 +9,5 @@ function changeTab(page) {
     currentTab = page;
     document.getElementById(page).style.display = "";
     document.getElementById(page + "Btn").classList.add("active");
+
 }
