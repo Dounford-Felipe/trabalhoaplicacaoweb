@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho de Aplicação Web e Mobile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="topnav">
+            <!-- Eu decidi usar abas ao invés de múltiplas páginas por praticidade, mas ambas as opções são a mesma coisa
+            O ponto positivo de usar abas é que não existe reload
+            O ponto negativo é que o carregamento inicial pode ser maior
+            Neste caso não há uma diferença significativa pois a página é bem curta-->
+            <li onclick="changeTab('portfolio')" id="portfolioBtn" class="active">Portfólio</li>
+            <li onclick="changeTab('sobre')" id="sobreBtn">Sobre</li>
+            <li onclick="changeTab('formacao')" id="formacaoBtn">Formação</li>
+            <li onclick="changeTab('contato')" id="contatoBtn">Contato</li>
+        </ul>
+    </nav>
+    <!-- Embora seja semanticamente correto é comum ver sites sem uma tag main -->
+    <main>
+        <div id="portfolio">
+            <div class="project" id="projectMap">
+                <h1><a href="https://flatmmo.wiki/index.php/Game_Map">Mapa Interativo</a></h1>
+                <ul class="carousel" style="--anchor-name:--map">
+                    <li class="carouselItem">
+                        <img src="images/map.PNG" alt="mapa interativo">
+                    </li>
+                    <li class="carouselItem">
+                        <img src="images/map2.PNG" alt="mapa interativo sem objetos e caminhos">
+                    </li>
+                </ul>
+                <span>Um mapa interativo do jogo <a href="https://flatmmo.com/">FlatMMO</a>, ele conta com interruptores para objetos do cenário, estruturas, personagens e caminhos.</span>
+                <br>
+                <span>O mapa também possui um sistema de busca, incluindo via parâmetros no url. (A implementação não é convencional pois acomoda certas limitações do chat do jogo)</span>
+                <br>
+                <span>O código está disponível neste repositório: <a href="https://github.com/Dounford-Felipe/FlatMMO-Wiki-Extras/tree/main/map">Interactive Map</a></span>
+            </div>
+            <div class="project" id="projectEditor">
+                <h1><a href="https://flatmmo.wiki/index.php/Map_Editor">Editor de Mapa</a></h1>
+                <ul class="carousel" style="--anchor-name:--editor">
+                    <li class="carouselItem">
+                        <img src="images/editor.PNG" alt="mapa interativo">
+                    </li>
+                    <li class="carouselItem">
+                        <img src="images/editor2.PNG" alt="mapa interativo">
+                    </li>
+                    <li class="carouselItem">
+                        <img src="images/editor3.PNG" alt="mapa interativo">
+                    </li>
+                    <li class="carouselItem">
+                        <img src="images/editor4.PNG" alt="mapa interativo">
+                    </li>
+                </ul>
+                <span>Um editor interativo para o mapa mencionado acima, com ele pessoas sem conhecimentos de programação são capazes de atualizar o mapa de forma fácil e rápida</span>
+                <br>
+                <span>O editor possui funções de arrastar e soltar objetos e personagens, edição de itens por meio do botão direito e salvamento via API</span>
+                <br>
+                <span>O código está disponível neste repositório: <a href="https://github.com/Dounford-Felipe/FlatMMO-Wiki-Extras/tree/main/map">Map Editor</a></span>
+            </div>
+            <div class="project" id="projectWardrobe">
+                <h1><a href="https://flatmmo.wiki/index.php/Map_Editor">Vestiário</a></h1>
+                <ul class="carousel" style="--anchor-name:--wardrobe">
+                    <li class="carouselItem">
+                        <img src="images/wardrobe.PNG" alt="mapa interativo">
+                    </li>
+                    <li class="carouselItem">
+                        <img src="images/wardrobe2.PNG" alt="mapa interativo">
+                    </li>
+                    <li class="carouselItem">
+                        <img src="images/wardrobe3.PNG" alt="mapa interativo">
+                    </li>
+                </ul>
+                <span>Um vestuário interativo com as armaduras do jogo FlatMMO usado para testar combinações</span>
+                <br>
+                <span>O vestuário é capaz de reproduzir as animações do jogo, seu uso principal é decidir qual equipamento usar apenas como acessório visual em um userscript para o jogo criado por mim</span>
+                <br>
+                <span>O código está disponível neste repositório: <a href="https://github.com/Dounford-Felipe/FlatMMO-Wiki-Extras/tree/main/wardrobe">Vestiário</a></span>
+            </div>
+            <div class="project" id="projectRender">
+                <h1><a href="https://dounford-felipe.github.io/CR-Block-Renderer/">Block Render</a></h1>
+                <ul class="carousel" style="--anchor-name:--render">
+                    <li class="carouselItem">
+                        <img src="images/render.PNG" alt="mapa interativo">
+                    </li>
+                    <li class="carouselItem">
+                        <img src="images/render2.PNG" alt="mapa interativo">
+                    </li>
+                    <li class="carouselItem">
+                        <img src="images/render3.PNG" alt="mapa interativo">
+                    </li>
+                </ul>
+                <span>Um gerador de renders de blocos para a wiki do jogo Cosmic Reach</span>
+                <br>
+                <span>A ferramenta é capaz de gerar imagens de blocos, meio blocos, escadas e itens, além de comprimir as imagens antes de salvar para maior eficiência</span>
+                <br>
+                <span>O código está disponível neste repositório: <a href="https://github.com/Dounford-Felipe/CR-Block-Renderer">Block Render</a></span>
+            </div>
+
+        </div>
+        <div id="sobre" style="display: none;">
+            <h1>Sobre Mim</h1>
+            <p>Meu nome é Willyan Smyth da Silva Antunes, mas online eu geralmente uso o nome Felipe Dounford, tenho 22 anos e estou cursando Engenharia de software na Uninter.</p>
+            <p>Eu comecei a programar em 2022 e desde então eu encontrei minha paixão ao tornar ideias em código.</p>
+            <p>No meu tempo livre eu geralmente jogo alguns jogos como FlatMMO e Idle Pixel, eu também estou sempre programando algo aleatório, como plugins para os jogos citados.</p>
+            <p>Atualmente estou desenvolvendo um projeto que envolve criar minha própria linguagem de programação contendo inúmeras estruturas de dados e algoritmos, especialmente algumas mais exóticas, isso dentro de uma VM emulada que eu arquitetei, almejo ser capaz de escrever um artigo baseado neste projeto no futuro.</p>
+        </div>
+        <div id="formacao" style="display: none;">
+            <h1>Formação</h1>
+            <h5>Técnico em Administração - ETEC (2019-2020)</h5>
+            <h5>Inglês Iniciante a Avançado - CNA (2019-2021)</h5>
+            <h5>Engenharia de Software - UNINTER (2025-)</h5>
+        </div>
+        <div id="contato" style="display: none;">
+            <h1>Contato</h1>
+            <p>Deixe uma mensagem aqui:</p>
+            <!-- Esse formulário não faz nada, mas se fosse para fazer algo seria possível usar o método POST para algum servidor/serviço que encaminharia essa mensagem para meu email-->
+            <form>
+                <label for="email">E-mail para contato</label>
+                <input type="email" id="email">
+                <br>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome">
+                <br>
+                <label for="mensagem">Mensagem</label>
+                <input type="text" id="mensagem" placeholder="Deixe aqui a sua mensagem">
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <!-- Essa tag script fica no final do body, logo o código é executado apenas depois do resto ser carregado, mas nesse caso não faz muita diferença -->
+    <script src="main.js"></script>
+</body>
+</html>
